@@ -1,5 +1,6 @@
 <?php
 
+namespace App\User;
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -11,9 +12,13 @@ class AdminUsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        return view ('admin.users.index');
+
+        $users = \App\User::all();
+
+        return view ('admin.users.index', compact('users'));
     }
 
     /**
