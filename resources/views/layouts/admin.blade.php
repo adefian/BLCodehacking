@@ -12,9 +12,10 @@
     <title>Admin</title>
 
     <!-- Bootstrap Core CSS -->
+   
+    <link href="{{asset('admin/css/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('admin/css/libs/blog-post.css')}}" rel="stylesheet">
     <!-- <link href="{{asset('admin/css/libs/bootstrap.css')}}" rel="stylesheet"> -->
-    <link href="{{asset('admin/css/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <link href="{{asset('admin/css/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
 
