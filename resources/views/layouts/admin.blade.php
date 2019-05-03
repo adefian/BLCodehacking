@@ -34,6 +34,7 @@
     <style type="text/css">
         #admin-page {
             padding-top: 0px ;
+            font-family: 'Nunito', sans-serif;
         }
     </style>
 
