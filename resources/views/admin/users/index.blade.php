@@ -2,6 +2,13 @@
 
 @section('content')
 
+    @if(session('deleted_user'))
+
+        <div class="alert alert-danger" role="alert">{{session('deleted_user')}}</div>
+
+    @endif
+
+
     <h1><i>Users</i></h1>
 
     <table class="table">
@@ -32,11 +39,6 @@
                 <td>{{$user->is_active == 1 ? 'Active' : 'Not Active'}}</td>
                 <td>{{$user->created_at->diffForHumans()}}</td>
                 <td>{{$user->updated_at->diffForHumans()}}</td>
-                <td><form action="{{ route('users.destroy', $user->id)}}" method="post">
-                  @csrf
-                  @method('DELETE')
-                  <button class="btn btn-danger btn-sm" type="submit">Delete</button>
-                </form></td>
             </tr>
 
             @endforeach

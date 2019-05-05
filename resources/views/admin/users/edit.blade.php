@@ -47,15 +47,20 @@
                 </div>
                 <div class="form-group"> 
                       <label for="password" class="control-label">Password : </label>
-                      <input name="password" type="password" class="form-control" placeholder="Password" required>
+                      <input name="password" type="password" class="form-control" placeholder="Password" >
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-warning pull-right" type="submit">Update</button>
+                    <button class="btn btn-warning col-sm-6" type="submit">Update</button>
                 </div>
-
-            </div>
         </form>
 
+                <form action="{{ route('users.destroy', $user->id)}}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <button class="btn btn-danger col-sm-6 pull-right" type="submit">Delete</button>
+                </form>
+
+            </div>
       </div>
 </div>
 <div class="row">
