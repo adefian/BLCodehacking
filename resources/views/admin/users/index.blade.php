@@ -11,8 +11,8 @@
 
     <h1><i>Users</i></h1>
 
-    <table class="table">
-        <thead>
+    <table class="table table-hover">
+        <thead class="">
             <tr>
                 <th>Id</th>
                 <th>Photo</th>

@@ -13,17 +13,17 @@
 
     <!-- Bootstrap Core CSS -->
    
-    <link href="{{asset('admin/css/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('admin/css/libs/blog-post.css')}}" rel="stylesheet">
-    <!-- <link href="{{asset('admin/css/libs/bootstrap.css')}}" rel="stylesheet"> -->
+    <link href="{{asset('style/css/libs/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('style/css/libs/blog-post.css')}}" rel="stylesheet">
+    <!-- <link href="{{asset('style/css/libs/bootstrap.css')}}" rel="stylesheet"> -->
 
-    <link href="{{asset('admin/css/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('style/css/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
 
-    <link href="{{asset('admin/css/libs/metisMenu.css')}}" rel="stylesheet">
+    <link href="{{asset('style/css/libs/metisMenu.css')}}" rel="stylesheet">
 
-    <link href="{{asset('admin/css/libs/sb-admin-2.css')}}" rel="stylesheet">
+    <link href="{{asset('style/css/libs/sb-admin-2.css')}}" rel="stylesheet">
 
-    <link href="{{asset('admin/css/libs/styles.css')}}" rel="stylesheet">
+    <link href="{{asset('style/css/libs/styles.css')}}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -34,7 +34,7 @@
     <style type="text/css">
         #admin-page {
             padding-top: 0px ;
-            font-family: 'Nunito', sans-serif;
+            
         }
     </style>
 
@@ -151,7 +151,7 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a href="/admins"><i class="fa fa-tags fa-fw"></i> Admin</a>
+                        <a href="/admin"><i class=""></i> Admin <span class="fa fa-user fa-fw"></span></a>
                     </li>
 
                     <li>
@@ -173,7 +173,7 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/posts">All Posts</a>
+                                <a href="/admin/posts">All Posts</a>
                             </li>
 
                             <li>
@@ -382,12 +382,12 @@
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src="{{asset('admin/js/jquery/jquery.min.js')}}"></script>
-<!-- <script src="{{asset('admin/js/libs/bootstrap.js')}}"></script> -->
-<script src="{{asset('admin/css/bootstrap/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('admin/js/libs/metisMenu.js')}}"></script>
-<script src="{{asset('admin/js/libs/sb-admin-2.js')}}"></script>
-<script src="{{asset('admin/js/libs/script.js')}}"></script>
+<script src="{{asset('style/js/libs/jquery.js')}}"></script>
+<!-- <script src="{{asset('style/js/libs/bootstrap.js')}}"></script> -->
+<script src="{{asset('style/css/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('style/js/libs/metisMenu.js')}}"></script>
+<script src="{{asset('style/js/libs/sb-admin-2.js')}}"></script>
+<script src="{{asset('style/js/libs/script.js')}}"></script>
 
 @yield('footer')
 

@@ -21,7 +21,7 @@ class AdminUsersController extends Controller
     public function index()
     {
 
-        $users = \App\User::all();
+        $users = User::all();
 
         return view ('admin.users.index', compact('users'));
     }
@@ -34,7 +34,7 @@ class AdminUsersController extends Controller
     public function create()
     {
 
-        $roles = \App\Role::all();
+        $roles = Role::all();
 
         return view ('admin.users.create', compact('roles'));
     }
@@ -58,7 +58,7 @@ class AdminUsersController extends Controller
 
             $file->move('images', $name);  
 
-            $photo = \App\Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file'=>$name]);
 
             $input['photo_id'] = $photo->id;
         }
@@ -90,9 +90,9 @@ class AdminUsersController extends Controller
     public function edit($id)
     {
 
-        $user = \App\User::find($id);
+        $user = User::find($id);
 
-        $roles = \App\Role::all();
+        $roles = Role::all();
 
         return view ('admin.users.edit', compact('user','roles'));
     }
@@ -108,7 +108,7 @@ class AdminUsersController extends Controller
     {
 
         
-        $user = \App\User::findOrFail($id);
+        $user = User::findOrFail($id);
         
         $input = $request->all();
 
@@ -118,7 +118,7 @@ class AdminUsersController extends Controller
 
             $file->move('images', $name);
 
-            $photo = \App\Photo::create(['file'=>$name]);
+            $photo = Photo::create(['file'=>$name]);
 
             $input['photo_id'] = $photo->id;
         }
@@ -137,7 +137,7 @@ class AdminUsersController extends Controller
      */
     public function destroy($id)
     {
-        $user = \App\User::find($id);
+        $user = User::find($id);
      $user->delete($user);
      return redirect('/admin/users')->with('deleted_user','The user has been deleted');
     }
